@@ -13,5 +13,19 @@ console.log(yearsUser);
 
 // Ricavo il costo del biglietto
 const priceKm = 0.21;
-const priceTicket = nKmT * priceKm;
+const priceTicket = `Il prezzo totale del biglietto è di: €${nKmT * priceKm}`;
 console.log(priceTicket);
+
+// Sconto in base all'eta
+let discountYoung = 20%;
+let discountOlder = 40%;
+
+if (yearsUser < 65) {
+    priceTicket - discountYoung;
+} else (yearsUser > 65) {
+    priceTicket - discpuntOlder;
+}
+
+
+
+    
