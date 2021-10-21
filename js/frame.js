@@ -10,3 +10,8 @@ console.log(nKmT);
 //Richiesto a utente quanti anni ha
 let yearsUser = parseInt(prompt("Cortesemente, inserisca qui la sua età"));
 console.log(yearsUser);
+
+// Ricavo il costo del biglietto
+const priceKm = 0.21;
+const priceTicket = nKmT * priceKm;
+console.log(priceTicket);
