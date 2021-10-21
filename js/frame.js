@@ -12,20 +12,17 @@ let yearsUser = parseInt(prompt("Cortesemente, inserisca qui la sua età"));
 console.log(yearsUser);
 
 // Ricavo il costo del biglietto
-const priceKm = 0.21;
-const priceTicket = `Il prezzo totale del biglietto è di: €${nKmT * priceKm}`;
+let priceTicket = nKmT * 0.21;
 console.log(priceTicket);
 
 // Sconto in base all'eta
-let discountYoung = 20%;
-let discountOlder = 40%;
-
-if (yearsUser < 65) {
-    priceTicket - discountYoung;
-} else (yearsUser > 65) {
-    priceTicket - discpuntOlder;
+if (yearsUser < 18) {
+    priceTicket = priceTicket - (priceTicket * 20 / 100);
+} else if (yearsUser > 64) {
+    priceTicket = priceTicket - (priceTicket * 40 / 100);
 }
 
+// Formula di arrotondamento a 2 decimali
+let aroundNu = Math.round((priceTicket + Number.EPSILON) * 100) / 100;
 
-
-    
+document.getElementById('biglietto').innerHTML = `Il suo biglietto costa: €${aroundNu}`;
