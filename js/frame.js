@@ -4,7 +4,7 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65. */
 
 // Richiesto a utente quanti KM deve percorrere 
-let nKmT = parseInt(prompt("salve, quanti chilometri deve percorrere per arrivare a destinazione?"));
+let nKmT = parseInt(prompt("Salve, quanti chilometri deve percorrere per arrivare a destinazione?"));
 console.log(nKmT);
 
 //Richiesto a utente quanti anni ha
@@ -22,7 +22,5 @@ if (yearsUser < 18) {
     priceTicket = priceTicket - (priceTicket * 40 / 100);
 }
 
-// Formula di arrotondamento a 2 decimali
-let aroundNu = Math.round((priceTicket + Number.EPSILON) * 100) / 100;
 
-document.getElementById('biglietto').innerHTML = `Il suo biglietto costa: €${aroundNu}`;
+document.getElementById('biglietto').innerHTML = `Il suo biglietto costa: €${priceTicket.toFixed(2)}`;
